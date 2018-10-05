@@ -1,0 +1,33 @@
+.aws-sld__wrapper {
+  max-height: 100vh;
+}
+
+.aws-sld__bullets {
+  display: none;
+}
+
+.loading-gif {
+  height: 128px;
+  position: absolute;
+}
+
+.aws-sld__controls button .aws-sld__controls__arrow-left,
+.aws-sld__controls button .aws-sld__controls__arrow-right,
+.aws-sld__controls .aws-sld__next,
+.aws-sld__controls .aws-sld__prev {
+  width: 0;
+  height: 0;
+}
+
+.wrapper-uncentered,
+.wrapper {
+  background-color: #228b22;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}

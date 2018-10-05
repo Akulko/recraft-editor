@@ -1,0 +1,23 @@
+.plate {
+  margin: 0 auto;
+  background: #c5c5c5;
+  padding: 15px;
+  border-radius: 5px;
+  border: outset #aba2a2;
+
+  @media (max-width: 767px) {
+    width: auto;
+  }
+
+  @media (max-width: 991px) {
+    width: 750px;
+  }
+
+  @media (max-width: 1199px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}

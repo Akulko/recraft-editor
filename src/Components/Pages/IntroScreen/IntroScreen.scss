@@ -1,0 +1,144 @@
+.text-section-one {
+  padding: 7rem 10rem 0;
+}
+
+.text-section-two {
+  padding: 2rem 10rem;
+}
+
+.button-animated,
+.skip {
+  background-color: #ddf4ff;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  box-sizing: border-box;
+  font-size: smaller;
+  cursor: pointer;
+  margin: 0 0.5rem 0 2rem;
+}
+
+.skip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.with-button {
+  display: flex;
+  align-items: center;
+  height: 18px;
+}
+
+.p-tip {
+  font-size: 10px;
+}
+
+.aws-sld {
+  &__content {
+    // First text block
+    .text-section-one {
+      .p-animation-run {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        transition: transform 3s cubic-bezier(0.15, 0.3, 0.15, 1),
+          opacity 1s ease-out;
+      }
+      .p-animation-run:nth-child(2) {
+        transition-delay: 2.15s, 2.15s;
+      }
+    }
+    // Second text block
+    .text-section-two {
+      .p-animation-run {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        transition: transform 3s cubic-bezier(0.15, 0.3, 0.15, 1),
+          opacity 1s ease-out;
+        transition-delay: 4.15s;
+      }
+
+      .with-button {
+        .p-animation-run {
+          transition-delay: 6.15s, 6.15s;
+        }
+
+        .button-animated {
+          transition-delay: 8.15s, 8.15s;
+        }
+        .p-tip {
+          transition-delay: 9s, 9s;
+        }
+      }
+    }
+
+    &--exit {
+      // First text block
+      .text-section-one .p-animation-run {
+        transition: transform 0.225s cubic-bezier(0.85, 0, 0.85, 0.7),
+          opacity 0.4s ease-out;
+      }
+      // Second text block
+      .text-section-two {
+        .p-animation-run {
+          transition: transform 0.225s cubic-bezier(0.85, 0, 0.85, 0.7),
+            opacity 0.4s ease-out;
+        }
+        .with-button .button-animated {
+          transition: transform 0.225s cubic-bezier(0.85, 0, 0.85, 0.7),
+            opacity 0.4s ease-out;
+        }
+      }
+    }
+    &--moveLeft {
+      // First text block
+      .text-section-one .p-animation-run {
+        transform: translate3d(-50px, 0, 0);
+        opacity: 0;
+      }
+      // Second text block
+      .text-section-two {
+        .p-animation-run {
+          transform: translate3d(-50px, 0, 0);
+          opacity: 0;
+        }
+        .with-button {
+          .button-animated {
+            transform: translate3d(-50px, 0, 0);
+            opacity: 0;
+          }
+          .p-tip {
+            transform: translate3d(0, -20px, 0);
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &--moveRight {
+      // First text block
+      .text-section-one .p-animation-run {
+        transform: translate3d(50px, 0, 0);
+        opacity: 0;
+      }
+      // Second text block
+      .text-section-two {
+        .p-animation-run {
+          transform: translate3d(50px, 0, 0);
+          opacity: 0;
+        }
+        .with-button {
+          .button-animated {
+            transform: translate3d(20px, 0, 0);
+            opacity: 0;
+          }
+          .p-tip {
+            transform: translate3d(0, 20px, 0);
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
